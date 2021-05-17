@@ -1,43 +1,3 @@
-// document.querySelector("button").addEventListener("click", (e) => {
-//   e.preventDefault()
-//   // console.log(e)
-//   const url = "http://localhost:5000/sent";
-//   var data = new URLSearchParams();
-//   var ele = document.getElementById('myForm').elements
-//   // console.log(ele);
-//   for (var i = 0; i < ele.length; i++) {
-//     // console.log(ele[i].name);
-//     // console.log(ele[i].value);
-//     // for (const pair of new FormData(e.target)) {
-//     // console.log(pair)
-//     if (ele[i].type === "text")
-//       data.append(ele[i].name, ele[i].value);
-//     // }
-//   }
-
-
-
-//   fetch(url, {
-//     method: "post",
-//     body: data,
-
-//   }).then(res => res.json())
-//     .then(res2 => {
-//       //   console.log(res2)
-//       location.reload()
-//     });
-// })
-
-// function deleteme(item) {
-//   console.log(item.innerText);
-//   fetch("http://localhost:5000/remove/" + item.innerText, {
-//     method: "delete"
-//   }).then(res => res.json())
-//     .then(res2 => {
-//       //   console.log(res2);
-//       location.reload()
-//     });
-// }
 
 function Home() {
   console.log(window.location.href)
@@ -54,14 +14,12 @@ function Send() {
   }).then(res => res.json())
     .then(res2 => {
       console.log(res2)
-      // location.reload()
+
     });
 }
 
 function Transfer() {
-  // console.log(accNumber)
-  // console.log(document.getElementById("raccn"));
-  // document.getElementById("raccn").innerHTML = accNumber;
+
   const url = `http://localhost:5000/transfer`;
   window.location.replace(url);
 }
@@ -71,18 +29,13 @@ function SendMoney() {
   var Acc2 = document.getElementById("raccn").value;
   var amount = document.getElementById("amount").value;
   amount = Number(amount);
-  // console.log(Acc1, typeof (Acc1));
-  // console.log(Acc2, typeof (Acc2));
-  // console.log(amount, typeof (amount));
-  // setTimeout(10000);
+
   var data = {
     Acc1,
     Acc2,
     amount
   };
   const url = "http://localhost:5000/transferred";
-  // var data = new URLSearchParams();
-  // data.append({ name1: sname, name2: rname }, amount);
   console.log(data);
   fetch('/transferred', {
     method: "POST",
