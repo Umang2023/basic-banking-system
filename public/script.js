@@ -5,7 +5,7 @@ function Home() {
 }
 
 function Send() {
-  const url = "http://localhost:5000/sent";
+  const url = "https://basic-banking-system-at-grip.herokuapp.com/sent";
   var data = new URLSearchParams();
   data.append('umang', 1000);
   fetch(url, {
@@ -20,7 +20,7 @@ function Send() {
 
 function Transfer() {
 
-  const url = `http://localhost:5000/transfer`;
+  const url = `https://basic-banking-system-at-grip.herokuapp.com/transfer`;
   window.location.replace(url);
 }
 
@@ -35,7 +35,7 @@ function SendMoney() {
     Acc2,
     amount
   };
-  const url = "http://localhost:5000/transferred";
+  const url = "https://basic-banking-system-at-grip.herokuapp.com/transferred";
   console.log(data);
   fetch('/transferred', {
     method: "POST",
@@ -72,14 +72,14 @@ function SendMoney() {
       else {
         console.log(res2);
         ShowToast("Transaction Successful. Redirecting...");
-        window.location.replace("http://localhost:5000/transactions")
+        window.location.replace("https://basic-banking-system-at-grip.herokuapp.com/transactions")
       }
       // location.reload()
     });
 
 }
 function Goback() {
-  const url = "http://localhost:5000/customers";
+  const url = "https://basic-banking-system-at-grip.herokuapp.com/customers";
   window.location.replace(url);
 }
 
