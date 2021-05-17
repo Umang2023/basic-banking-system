@@ -1,0 +1,217 @@
+body {
+    text-align: center;
+    color: #fff;
+    /* background: linear-gradient(rgb(24, 167, 224), rgb(255, 0, 255)) no-repeat center center fixed; */
+    font-family: 'Fredoka One', cursive;
+    background: rgb(28, 180, 237);
+    background: linear-gradient(180deg, rgba(28, 180, 237, 1) 33%, rgb(94, 61, 240) 87%) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #283c86;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #283c86, #45a247);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #283c86, #45a247);
+}
+
+.img-div {
+    height: 100vh;
+    width: 65%;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: center;
+    align-items: center; */
+    /* background: rgb(28, 180, 237);
+    background: linear-gradient(180deg, rgba(28, 180, 237, 1) 23%, rgba(16, 12, 235) 87%); */
+    padding: 30px;
+    overflow: hidden;
+}
+
+.img-div>img {
+    border-radius: 15px;
+}
+
+.img-3 {
+    z-index: 3;
+    position: absolute;
+    width: 500px;
+    height: 350px;
+    top: 250px;
+    left: 650px;
+}
+
+.img-2 {
+    position: absolute;
+    z-index: 2;
+    height: 300px;
+    width: 400px;
+    top: 20px;
+    left: 500px;
+}
+
+.img-1 {
+    position: absolute;
+    z-index: 1;
+    height: 300px;
+    width: 400px;
+    top: 40px;
+    left: 850px;
+}
+
+.wlcm-div-cont {
+    /* background: rgb(28, 180, 237);*/
+    /* background:  */
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+    /* background: rgb(28, 180, 237);
+    background: linear-gradient(180deg, rgba(28, 180, 237, 1) 23%, rgb(16, 12, 235) 87%); */
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    float: left;
+    margin-left: 0;
+}
+
+.wlcm-heading {
+    /* color: hsla(0, 0%, 0%, .9); */
+    /* font: normal 140px Varela Round, sans-serif; */
+    /* height: 140px; */
+    /* left: 0;
+    letter-spacing: 5px;
+    margin: -80px 0 0 0; */
+    /* position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    width: 100%; */
+    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+    /* color : rgba(28, 180, 237, 1);  */
+}
+
+.wlcm-msg {
+    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+}
+
+.welcome-div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    /* margin-bottom: 20%; */
+}
+
+.angled-gradient-button {
+    font-family: 'Fredoka One', cursive;
+    background-size: 220%;
+    box-shadow: 0 .2em .3em rgba(0, 0, 0, 0.15);
+    color: rgba(28, 180, 237, 1);
+    background-color: transparent;
+    background-position: 100%;
+    border: 3px solid rgba(28, 180, 237, 1);
+    /* text-transform: uppercase; */
+    padding: 8px 16px;
+    border-radius: 3px;
+    transition: all .2s ease-out;
+    font-weight: 900;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-image: linear-gradient(110deg, rgba(28, 180, 237, 1) 0%, rgba(28, 180, 237, 1) 50%, transparent 50%, transparent 100%);
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.angled-gradient-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, 0.25);
+    background-position: 0;
+    color: #fff;
+}
+
+.angled-gradient-button:active {
+    transform: translateY(-1px);
+}
+
+.card-title:hover {
+    color: rgb(21, 5, 235) !important;
+}
+
+.card-action {
+    background-color: rgba(0, 0, 0, 0.192) !important;
+}
+
+.card-action>a {
+    color: rgb(28, 180, 237) !important;
+}
+
+.card-action>a:hover {
+    color: rgb(0, 11, 17) !important;
+}
+
+.css-serial {
+    counter-reset: serial-number;
+    /* Set the serial number counter to 0 */
+}
+
+.css-serial td:first-child:before {
+    counter-increment: serial-number;
+    /* Increment the serial number counter */
+    content: counter(serial-number);
+    /* Display the counter */
+}
+
+.form-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 30px;
+}
+
+.form-input>label {
+    color: #fff;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2rem;
+    display: inline-block;
+    width: 500px;
+    margin-left: 0;
+}
+
+.form-input>input {
+    display: inline-block;
+    width: 500px !important;
+    color: #fff;
+    font-family: 'Fredoka One', cursive;
+}
+
+.form-input>input:focus {
+    border-bottom: 2px solid #fff !important;
+    color: #fff;
+    font-family: 'Fredoka One', cursive;
+}
+
+.form-submit {
+    width: 30%;
+    float: right !important;
+    margin: 20px 0px;
+    /* padding: 10px; */
+}
+
+.form-submit>button {
+    margin: 10px;
+}

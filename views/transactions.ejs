@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Basic Banking System</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <%- include('partials/nav'); -%>
+    <h3 style="margin: 3rem 0 2rem">All past transactions</h3>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <table
+        class="centered css-serial"
+        style="
+          margin: 30px;
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.667);
+          border-radius: 15px;
+          background: rgba(230, 236, 233, 0);
+          overflow: hidden;
+          width: 100%;
+          border-top: 1px solid rgba(255, 255, 255, 0.5);
+          backdrop-filter: blur(5px);
+        "
+      >
+        <thead>
+          <tr
+            style="
+              color: #000;
+              height: 5rem;
+              font-size: 1.5rem;
+              text-shadow: -1px -1px 1px #fff, 1px 1px 1px #fff;
+            "
+          >
+            <th>S. No.</th>
+            <th>Sender's Name</th>
+            <th>Sender's Account No.</th>
+            <th>Receiver's Name</th>
+            <th>Receiver's Account No.</th>
+            <th>Transferred Amount</th>
+          </tr>
+        </thead>
+
+        <% transactions.forEach(item=>{ %>
+        <tr>
+          <td></td>
+          <td><%= item.Name1 %></td>
+          <td><%= item.Acc1 %></td>
+          <td><%= item.Name2 %></td>
+          <td><%= item.Acc2 %></td>
+          <td><%= item.transferred%></td>
+          <!-- <td>Rs. <%= item.currBalance %></td> -->
+
+          <!-- <td>
+            <button
+              class="angled-gradient-button"
+              onclick="Transfer()"
+              style="color: #fff"
+            >
+              Transfer
+            </button>
+          </td> -->
+        </tr>
+        <% }) %>
+      </table>
+    </div>
+    <!-- <ul>
+      <% transactions.forEach(item=>{ %>
+      <li><%= item %></li>
+      <% }) %>
+    </ul> -->
+  </body>
+</html>

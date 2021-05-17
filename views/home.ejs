@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Basic Banking System</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <%- include('partials/nav') -%>
+    <h1>ABC Bank</h1>
+    <h4 style="font-family: 'Lobster', cursive;">
+       Providing the best banking experience to our customers since 1990. 
+    </h4>
+    
+    <!-- <button class="angled-gradient-button" onclick="Send()">
+      Send
+    </button> -->
+    <div class="content-cont">
+      <div class="content" style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      margin: 100px;
+      color: #000;
+      ">
+
+        <div class="card" style="
+            margin: 30px;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.667);
+            border-radius: 15px;
+            background: rgba(230, 236, 233, 0.35);
+            overflow: hidden;
+            width: 300px;
+             height: 380px;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+          ">
+          <div class="card-image">
+            <img
+              src="https://images.ctfassets.net/x4we65bqi45q/69PIq5GB2a067NpPSsc6La/8b3bf2d78368e31269c6869e60082601/how-to-do-mutual-fund-transactions-using-upi.jpg?w=800&q=50"
+              width="100px" height="200px" />
+            
+          </div>
+          <div class="card-content" >
+            <p>
+              <a href="./transfer"class="card-title" style="color: #fff; cursor: pointer;">Money Transfer</a>
+               Hasslefree Money Tranfer. Transfer money with just one click. 
+            </p>
+          </div>
+       
+        </div>
+
+
+        <div class="card" style="
+          margin: 30px;
+          box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.667);
+          border-radius: 15px;
+          background: rgba(230, 236, 233, 0.35);
+          overflow: hidden;
+           width: 300px;
+          height: 380px;
+          border-top: 1px solid rgba(255, 255, 255, 0.5);
+          backdrop-filter: blur(5px);
+        ">
+          <div class="card-image" 
+          style="display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;">
+            <img
+              src="https://cdn0.iconfinder.com/data/icons/online-money-service-orchid-volume-2/256/Transaction_History-512.png"
+              height="200px" style="width: 200px; "/>
+            
+          </div>
+          <div class="card-content" style="height: 143px;">
+            <a href="./transactions"class="card-title" style="color: #fff; cursor: pointer;">Transaction History</a>
+            <p>
+              Never forget where you spent your money. Just go to transaction history and see your past transactions
+            </p>
+          </div>
+      
+        </div>
+
+
+        <div class="card" style="
+          margin: 30px;
+          box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.667);
+          border-radius: 15px;
+          background: rgba(230, 236, 233, 0.35);
+          overflow: hidden;
+           width: 300px;
+           height: 380px;
+          border-top: 1px solid rgba(255, 255, 255, 0.5);
+          backdrop-filter: blur(5px);
+        ">
+          <div class="card-image">
+            <img src="https://i.dawn.com/large/2015/12/566bac7eabe8f.jpg" width="100px" height="200px" />
+            
+          </div>
+          <div class="card-content">
+            <a href="./customers" class="card-title" style="color: #fff; cursor: pointer;">View Customers</a>
+            <p>
+              We prioritize to help our customers. <br> <i>Whenever, Wherever.</i>
+            </p>
+          </div>
+         
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+    <script src="/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

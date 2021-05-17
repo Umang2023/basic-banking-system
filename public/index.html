@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Basic Banking System</title>
+
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style type="text/css">
+    #preloader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      overflow: visible;
+      background: url("https://i.pinimg.com/originals/e9/5a/92/e95a921638100a6e21b3143002d05a0f.gif")
+        no-repeat center center;
+      background-color: rgba(28, 180, 237, 1) !important;
+    }
+    #content {
+      display: none;
+    }
+  </style>
+
+  <script>
+    var preloader;
+
+    function preload(opacity) {
+      if (opacity <= 0) {
+        showContent();
+      } else {
+        preloader.style.opacity = opacity;
+        window.setTimeout(function () {
+          preload(opacity - 0.05);
+        }, 100);
+      }
+    }
+
+    function showContent() {
+      preloader.style.display = "none";
+      document.getElementById("content").style.display = "block";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      preloader = document.getElementById("preloader");
+      preload(1);
+    });
+  </script>
+  <body>
+    <div id="preloader">
+      <!-- <img src="https://i.pinimg.com/originals/e9/5a/92/e95a921638100a6e21b3143002d05a0f.gif"> -->
+    </div>
+    <div class="main-container">
+      <div class="wlcm-div-cont">
+        <div class="welcome-div">
+          <h3 class="wlcm-heading">ABC Bank <br /></h3>
+          <h4 class="wlcm-msg">
+            proudly welcomes you to this website. <br />
+            Allow us to provide you the best banking experience.
+          </h4>
+          <button
+            class="angled-gradient-button"
+            onclick="Home()"
+            style="
+              margin-top: 1rem;
+              background-color: #fff;
+              padding: 20px;
+            "
+          >
+            Let's Get Started
+          </button>
+        </div>
+      </div>
+      <div class="img-div">
+        <img
+          class="img-1"
+          src="https://specials-images.forbesimg.com/imageserve/5ecc1be26e6e72000739284f/960x0.jpg?fit=scale"
+        />
+        <img
+          class="img-2"
+          src="https://cdn.helpsystems.com/styles/crop_general/storage-api-public/021720-am-top-7-use-cases-in-banking-blog-1200x628.jpg?itok=o0xm5MQv"
+        />
+        <img
+          class="img-3"
+          src="https://www.nbc.ca/content/dam/fragment/images/ten-reasons-internet-banking-opt.jpg"
+        />
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
